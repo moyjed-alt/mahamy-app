@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>مهامي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+    <header>
+      <h1>مهامي</h1>
+      <p>نظّم يومك وأنجز أهدافك</p>
+    </header>
+
+    <section class="stats">
+      <div>
+        <strong id="totalCount">0</strong>
+        <span>كل المهام</span>
+      </div>
+      <div>
+        <strong id="doneCount">0</strong>
+        <span>مكتملة</span>
+      </div>
+      <div>
+        <strong id="remainingCount">0</strong>
+        <span>متبقية</span>
+      </div>
+    </section>
+
+    <section class="add-task">
+      <input id="taskInput"
+        type="text"
+        placeholder="ما المهمة التي تريد إنجازها؟">
+
+      <button id="addButton">+ إضافة</button>
+    </section>
+
+    <h2>قائمة مهامي</h2>
+    <ul id="taskList"></ul>
+
+    <p class="footer">كل إنجاز صغير يقربك من هدفك ✨</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
