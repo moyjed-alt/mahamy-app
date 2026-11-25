@@ -39,6 +39,28 @@ function renderTasks() {
       renderTasks();
     });
 
+    // زر تعديل المهمة
+    const editButton = document.createElement("button");
+    editButton.textContent = "تعديل";
+    editButton.className = "edit-btn";
+    editButton.style.marginInlineStart = "8px";
+
+    editButton.addEventListener("click", () => {
+      const newText = prompt("تعديل المهمة:", task.text);
+
+      if (newText === null) return;
+
+      if (!newText.trim()) {
+        alert("اكتب اسم المهمة");
+        return;
+      }
+
+      task.text = newText.trim();
+      saveTasks();
+      renderTasks();
+    });
+
+    // زر حذف المهمة
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "حذف";
     deleteButton.className = "delete-btn";
@@ -50,7 +72,9 @@ function renderTasks() {
     });
 
     li.appendChild(span);
+    li.appendChild(editButton);
     li.appendChild(deleteButton);
+
     taskList.appendChild(li);
   });
 
